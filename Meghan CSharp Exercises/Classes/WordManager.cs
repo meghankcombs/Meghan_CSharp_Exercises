@@ -24,7 +24,7 @@ namespace Meghan_CSharp_Exercises.Classes
         //Find the longest word in a given array of words
         public string longestWord(string userInput)
         {
-            var wordArray = userInput.Split(',');//split list of words into an array
+            var wordArray = userInput.Split(' ');//split list of words by the space
             var longestWord = "";//output
             var longestWords = new StringBuilder();
             //loop through array
@@ -46,7 +46,7 @@ namespace Meghan_CSharp_Exercises.Classes
 
         //Find words longer than a given integer
         public string longestInteger(int length, string userInput) {
-            var stringArray = userInput.Split(',');
+            var stringArray = userInput.Split(' ');
             var output = new StringBuilder();//more C#-esque way of strings with line breaks
             //var hits = 0;
             for (var loop = 0; loop < stringArray.Length; loop++)
@@ -73,7 +73,7 @@ namespace Meghan_CSharp_Exercises.Classes
 
         //Find the most frequent words and order them by frequency (two methods used, wordFrequency and CountOccurrences)
         public string wordFrequency(string userInput) {
-            var allWords = userInput.Split(',');
+            var allWords = userInput.Split(' ');
             var uniqueWords = allWords.Distinct();//removes duplicates and compares individual words 
                                                 //in uniqueArray to how many of each are in allWords array
             var output = new StringBuilder();
@@ -111,10 +111,10 @@ namespace Meghan_CSharp_Exercises.Classes
                  // Project the groups back to a flat array
                  .SelectMany(g => g);
 
-            return (string.Join(",", result));
+            return (string.Join(", ", result));
         }
 
-        //END OF PROGRAMS------------------------------------------------------------------------------------------------
+        //END OF PROGRAMS
 
         #region Old Code for Word Frequency
         //var allWordsArray = new string[] { freq1, freq2, freq3 };

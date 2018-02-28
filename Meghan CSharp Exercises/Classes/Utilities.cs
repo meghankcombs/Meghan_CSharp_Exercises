@@ -10,7 +10,7 @@ namespace Meghan_CSharp_Exercises.Classes
 {
     class Utilities
     {
-        //Constructors - IsValidInput, Numeric
+        //Constructors - Numeric
 
         public static bool IsValidInput(string input, int low, int high)//Using in Program class with userChoice
         {
@@ -34,7 +34,7 @@ namespace Meghan_CSharp_Exercises.Classes
             //if a string is input, it's tested here to see if it can be turned into integer; returns true or false
         }
 
-        //Constructor - IsValidInputAlpha, Alphabetic
+        //Constructor - Alphabetic
 
         public static bool IsValidInputAlpha(string type, string input)//Using with GetPalindromeData(), GetLongestWordData(), GetLongWordData() in MenuManager
         {
@@ -48,7 +48,7 @@ namespace Meghan_CSharp_Exercises.Classes
                     break;
             }
 
-            if (regex.IsMatch(input))//catching here for some reason..."Object not pointing to an instance... etc"
+            if (regex.IsMatch(input))
             {
                 result = true;
             }

@@ -93,7 +93,7 @@ namespace Meghan_CSharp_Exercises.Classes
         {
             var myWordMgr = new WordManager(); //this is an instance of class WordManager
 
-            string palin1;
+            string palin1; //empty variable
 
             Console.Clear();
             var msg = new StringBuilder();
@@ -104,7 +104,7 @@ namespace Meghan_CSharp_Exercises.Classes
             do
             {
                 Console.Write("Please enter a word: ");
-                palin1 = Console.ReadLine();
+                palin1 = Console.ReadLine().ToLower(); //makes all characters lowercase
 
             } while (!Utilities.IsValidInputAlpha("Alpha", palin1));
 
@@ -126,8 +126,8 @@ namespace Meghan_CSharp_Exercises.Classes
 
             do
             {
-                Console.Write("Please enter a list of words separated by a comma: ");
-                userInput = Console.ReadLine();
+                Console.Write("Please enter a list of words separated by a space: ");
+                userInput = Console.ReadLine().ToLower();
             } while (!Utilities.IsValidInputAlpha("Alpha", userInput));
 
             #region Old user input code
@@ -169,8 +169,8 @@ namespace Meghan_CSharp_Exercises.Classes
 
             do
             {
-                Console.Write("Please enter a list of words separated by a comma: ");
-                userInput = Console.ReadLine();
+                Console.Write("Please enter a list of words separated by a space: ");
+                userInput = Console.ReadLine().ToLower();
             } while (!Utilities.IsValidInputAlpha("Alpha", userInput));
 
             #region Old code for user input
@@ -205,8 +205,8 @@ namespace Meghan_CSharp_Exercises.Classes
 
             do
             {
-                Console.Write("Please enter a list of words separated by a comma: ");
-                userInput = Console.ReadLine();
+                Console.Write("Please enter a list of words separated by a space: ");
+                userInput = Console.ReadLine().ToLower();
             }
             while (userInput == "");
 
