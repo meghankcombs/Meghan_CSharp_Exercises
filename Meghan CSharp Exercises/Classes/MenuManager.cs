@@ -26,7 +26,7 @@ namespace Meghan_CSharp_Exercises.Classes
             Console.WriteLine(menuText);
         }
 
-        public static string GetMainMenuChoice()//have to have return statement bc not void return type
+        public static string GetMainMenuChoice()//need to have return statement bc not void return type
         {
             Console.Write("Please choose one of the above exercises (1-5): ");
             return Console.ReadLine();
